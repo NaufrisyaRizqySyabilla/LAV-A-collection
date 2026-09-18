@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Product Detail | LAVÉA</title><link rel="stylesheet" href="style.css"></head><body>
+<div class="topbar">FREE SHIPPING ON SELECTED ORDERS • LAVÉA ONLINE FASHION</div>
+
+<header class="navbar">
+  <div class="container nav-inner">
+    <button class="menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</button>
+    <a class="logo" href="index.html">LAVÉA<small>EVERYDAY ELEGANCE</small></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a><a href="shop.html">Shop</a><a href="index.html#categories">Collections</a><a href="index.html#about">About</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="icon-btn search-icon" href="shop.html" title="Search">⌕</a>
+      <button class="icon-btn favorite-icon" onclick="showWishlist()" title="Favorite">♡</button>
+      <a class="icon-btn cart-icon" href="cart.html" title="Shopping Bag">🛍<span class="count cart-count">0</span></a>
+      <button class="login-link" id="loginButton" onclick="isLoggedIn()?toast('Kamu sudah login (simulasi)'):openLoginModal()">Login</button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+ <div id="detail-page" class="detail"></div>
+ <section class="section" style="padding-top:20px"><div class="section-head"><div class="eyebrow">You may also like</div><h2 class="section-title">More from LAVÉA</h2></div><div id="related-list" class="product-grid"></div></section>
+</main>
+
+
+<footer>
+ <div class="container footer-main">
+  <div><h3>LAVÉA</h3><p>Everyday elegance, made for you.</p></div>
+  <div><h3>Shop</h3><p><a href="shop.html">All Products</a><br><a href="shop.html?cat=Tops">Tops</a><br><a href="shop.html?cat=Outer">Outer</a></p></div>
+  <div><h3>Help</h3><p>Size Guide<br>Shipping Info<br>Return Policy</p></div>
+  <div><h3>Contact</h3><p>hello@lavea-fashion.com<br>Instagram: @lavea.fashion<br>Shopee: LAVÉA<br>TikTok: @lavea.fashion</p></div>
+ </div>
+ <div class="copyright">© <span id="year"></span> LAVÉA. Product imagery belongs to its respective owner.</div>
+</footer>
+<div class="toast"></div>
+<script src="script.js"></script></body></html>

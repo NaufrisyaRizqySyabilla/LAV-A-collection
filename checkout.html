@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Checkout | LAVÉA</title><link rel="stylesheet" href="style.css"></head><body>
+<div class="topbar">FREE SHIPPING ON SELECTED ORDERS • LAVÉA ONLINE FASHION</div>
+
+<header class="navbar">
+  <div class="container nav-inner">
+    <button class="menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</button>
+    <a class="logo" href="index.html">LAVÉA<small>EVERYDAY ELEGANCE</small></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a><a href="shop.html">Shop</a><a href="index.html#categories">Collections</a><a href="index.html#about">About</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="icon-btn search-icon" href="shop.html" title="Search">⌕</a>
+      <button class="icon-btn favorite-icon" onclick="showWishlist()" title="Favorite">♡</button>
+      <a class="icon-btn cart-icon" href="cart.html" title="Shopping Bag">🛍<span class="count cart-count">0</span></a>
+      <button class="login-link" id="loginButton" onclick="isLoggedIn()?toast('Kamu sudah login (simulasi)'):openLoginModal()">Login</button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+ <div style="padding:65px 0 20px"><div class="eyebrow">LAVÉA checkout</div><h1 class="page-title">Checkout</h1></div>
+ <div class="cart-layout">
+  <form id="checkoutForm" class="summary" style="background:#fff;border:1px solid var(--line)">
+   <div class="form-grid">
+    <div class="field full"><label>Nama Lengkap</label><input required placeholder="Nama lengkap"></div>
+    <div class="field"><label>Email</label><input type="email" required placeholder="nama@email.com"></div>
+    <div class="field"><label>No. WhatsApp</label><input required placeholder="08xxxxxxxxxx"></div>
+    <div class="field full"><label>Alamat Pengiriman</label><textarea required placeholder="Alamat lengkap"></textarea></div>
+    <div class="field"><label>Provinsi</label><input required placeholder="Contoh: Kalimantan Barat"></div>
+    <div class="field"><label>Kode Pos</label><input required placeholder="781xx"></div>
+    <div class="field full"><label>Metode Pembayaran</label><select required><option value="">Pilih metode</option><option>Transfer Bank</option><option>QRIS</option><option>COD</option></select></div>
+    <div class="field full"><button class="btn" type="submit">PLACE ORDER</button></div>
+   </div>
+  </form>
+  <aside class="summary"><h2>Your Order</h2><div class="summary-total"><span>Total</span><strong id="checkoutTotal">Rp0</strong></div><p style="font-size:12px;line-height:1.7">(Ini adalah simulasi checkout untuk project front-end. Tidak ada pembayaran nyata.)</p></aside>
+ </div>
+ <div id="success" class="success"><div class="eyebrow">Order received</div><h1>Thank you for shopping with LAVÉA ♡</h1><p>Pesanan simulasi berhasil dibuat.</p><a class="btn" href="shop.html">CONTINUE SHOPPING</a></div>
+</main>
+
+
+<footer>
+ <div class="container footer-main">
+  <div><h3>LAVÉA</h3><p>Everyday elegance, made for you.</p></div>
+  <div><h3>Shop</h3><p><a href="shop.html">All Products</a><br><a href="shop.html?cat=Tops">Tops</a><br><a href="shop.html?cat=Outer">Outer</a></p></div>
+  <div><h3>Help</h3><p>Size Guide<br>Shipping Info<br>Return Policy</p></div>
+  <div><h3>Contact</h3><p>hello@lavea-fashion.com<br>Instagram: @lavea.fashion<br>Shopee: LAVÉA<br>TikTok: @lavea.fashion</p></div>
+ </div>
+ <div class="copyright">© <span id="year"></span> LAVÉA. Product imagery belongs to its respective owner.</div>
+</footer>
+<div class="toast"></div>
+<script src="script.js"></script></body></html>

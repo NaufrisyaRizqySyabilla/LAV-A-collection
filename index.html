@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Home | LAVÉA</title><link rel="stylesheet" href="style.css"></head><body>
+<div class="topbar">FREE SHIPPING ON SELECTED ORDERS • LAVÉA ONLINE FASHION</div>
+
+<header class="navbar">
+  <div class="container nav-inner">
+    <button class="menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</button>
+    <a class="logo" href="index.html">LAVÉA<small>EVERYDAY ELEGANCE</small></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a><a href="shop.html">Shop</a><a href="index.html#categories">Collections</a><a href="index.html#about">About</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="icon-btn search-icon" href="shop.html" title="Search">⌕</a>
+      <button class="icon-btn favorite-icon" onclick="showWishlist()" title="Favorite">♡</button>
+      <a class="icon-btn cart-icon" href="cart.html" title="Shopping Bag">🛍<span class="count cart-count">0</span></a>
+      <button class="login-link" id="loginButton" onclick="isLoggedIn()?toast('Kamu sudah login (simulasi)'):openLoginModal()">Login</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero"><div class="container hero-content">
+ <div class="eyebrow">New season / 2026</div>
+ <h1>Everyday elegance,<br>made for you.</h1>
+ <p>Discover feminine everyday pieces with a soft, timeless feel. Explore our curated collection of tops, pants and outerwear.</p>
+ <a class="btn light" href="shop.html">SHOP COLLECTION</a>
+</div></section>
+
+<section class="section" id="categories"><div class="container">
+ <div class="section-head"><div class="eyebrow">Explore</div><h2 class="section-title">Shop by Collection</h2></div>
+ <div class="categories">
+  <a class="category" style="background-image:url('https://down-id.img.susercontent.com/file/id-11134207-8224p-min08qprogef8c')" href="shop.html?cat=Tops"><div><h3>Tops</h3><p>Blouses, shirts & knitwear</p></div></a>
+  <a class="category" style="background-image:url('https://down-id.img.susercontent.com/file/id-11134207-822wq-mnm8anvn591d54')" href="shop.html?cat=Pants"><div><h3>Pants</h3><p>Comfortable everyday fit</p></div></a>
+  <a class="category" style="background-image:url('https://down-id.img.susercontent.com/file/id-11134207-8224y-mjkpvjdq3e2o35')" href="shop.html?cat=Outer"><div><h3>Outer</h3><p>Cardigans, jackets & vests</p></div></a>
+ </div>
+</div></section>
+
+<section class="section" style="padding-top:10px"><div class="container">
+ <div class="section-head"><div class="eyebrow">LAVÉA</div><h2 class="section-title">Featured Pieces</h2></div>
+ <div id="featured-list" class="product-grid"></div>
+ <div style="text-align:center;margin-top:35px"><a class="btn outline" href="shop.html">VIEW ALL PRODUCTS</a></div>
+</div></section>
+
+<section class="section" id="about"><div class="container banner">
+ <div><div class="eyebrow">Our aesthetic</div><h2>Simple. Feminine. Timeless.</h2><p>LAVÉA is a fictional fashion-store interface created for a front-end project. The visual direction takes inspiration from contemporary feminine Korean-style fashion.</p><a class="btn" href="shop.html">EXPLORE SHOP</a></div>
+ <div class="banner-img"></div>
+</div></section>
+
+
+<footer>
+ <div class="container footer-main">
+  <div><h3>LAVÉA</h3><p>Everyday elegance, made for you.</p></div>
+  <div><h3>Shop</h3><p><a href="shop.html">All Products</a><br><a href="shop.html?cat=Tops">Tops</a><br><a href="shop.html?cat=Outer">Outer</a></p></div>
+  <div><h3>Help</h3><p>Size Guide<br>Shipping Info<br>Return Policy</p></div>
+  <div><h3>Contact</h3><p>hello@lavea-fashion.com<br>Instagram: @lavea.fashion<br>Shopee: LAVÉA<br>TikTok: @lavea.fashion</p></div>
+ </div>
+ <div class="copyright">© <span id="year"></span> LAVÉA. Product imagery belongs to its respective owner.</div>
+</footer>
+<div class="toast"></div>
+<script src="script.js"></script></body></html>
